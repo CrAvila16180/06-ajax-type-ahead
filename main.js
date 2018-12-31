@@ -1,6 +1,7 @@
 const endpoint = 'https://gist.githubusercontent.com/CrAvila/fde2c03d9e7cd72520614cb674f25ab6/raw/95526af3111f855037331742c669bcede365f28d/playerdata.json';
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
+const displayLength = document.querySelector('.length');
 let players = [];
 
 fetch(endpoint)
@@ -32,6 +33,8 @@ function displayMatches() {
             <div class="role">${playerRole}</div>
             </li>`;
     }).join('');
+
+    displayLength.textContent = matchArray.length;
 
     suggestions.innerHTML = html;
 };
