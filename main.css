@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  } 
+
 html {
     box-sizing: border-box;
     background: #ffbf00;
-    font-family: 'helvetica neue';
+    font-family: 'Product Sans';
     font-size: 20px;
     font-weight: 200;
     
@@ -54,6 +61,8 @@ input.search {
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
+    flex-wrap: wrap;
+    
 }
 
 .suggestions li:nth-child(even){
@@ -66,10 +75,27 @@ input.search {
     background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%);
 }
 
-span.population {
+span.number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span.country {
     font-size: 15px;
+    
+    
+}
+
+div.role {
+    font-size: 10px;
+    position: relative;
+    align-self: flex-end;
 }
 
 .hl {
     background: #ffbf00;
+}
+
+.name {
+    text-align: left;
 }

@@ -10,7 +10,7 @@ fetch(endpoint)
 function findMatches(word, players){
     const regex = RegExp(word, 'gi')
     return players.filter(player => {
-        return player.name.match(regex) || player.country.match(regex);
+        return player.name.match(regex) || player.country.match(regex) ||player.role.match(regex) || player.number.match(regex);
     });
 };
 
@@ -21,10 +21,15 @@ function displayMatches() {
         const regex = new RegExp(this.value, 'gi');
         const playerName = player.name.replace(regex, `<span class="hl">${this.value}</span>`);
     const playerCountry = player.country.replace(regex, `<span class="hl">${this.value}</span>`);
+    const playerRole = player.role.replace(regex, `<span class="hl">${this.value}</span>`);
+    const playerNumber = player.number.replace(regex, `<span class="hl">${this.value}</span>`);
         return `
         <li>
+            
+            <span class="number">${playerNumber} </span>
             <span class="name">${playerName} </span>
-            <span class="population">${playerCountry}</span>
+            <span class="country">${playerCountry}</span>
+            <div class="role">${playerRole}</div>
             </li>`;
     }).join('');
 
