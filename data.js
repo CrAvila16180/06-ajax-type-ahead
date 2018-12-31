@@ -3055,11 +3055,13 @@ const playerNames = [
     }
   }
 
+  let ex = ['name surname', 'name surname', 'name surname', 'name surname'];
 
-  for(i=0; i < playerNames.length; i++){
 
-  }
+ 
 
-  let player1 = buildObject("Ronaldo","Portugal","Striker")
 
-  console.log(player1);
+  let player1 = buildObject(playerNames[0],playerCountries[0],playerRoles[0])
+  console.log(player1)
+
+  
