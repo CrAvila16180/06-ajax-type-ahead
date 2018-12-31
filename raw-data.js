@@ -3049,4 +3049,24 @@ const playerNames = [
  const data = playerNames.map((name, idx) => ({name, country: playerCountries[idx], number: playerNumbers[idx], role:playerRoles[idx]}))
 console.log(data);
 
+function removeDuplicates(originalArray, prop) {
+  var newArray = [];
+  var lookupObject  = {};
+
+  for(var i in originalArray) {
+     lookupObject[originalArray[i][prop]] = originalArray[i];
+  }
+
+  for(i in lookupObject) {
+      newArray.push(lookupObject[i]);
+  }
+   return newArray;
+}
+
+
+let unique = removeDuplicates(data, 'Alemania');
+
+console.log(unique + JSON.stringify(unique));
+
+
  
