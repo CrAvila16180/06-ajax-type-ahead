@@ -3058,10 +3058,13 @@ const playerNames = [
   let ex = ['name surname', 'name surname', 'name surname', 'name surname'];
 
 
- 
-
+ const data = playerNames.map((name, idx) => ({name, country: playerCountries[idx], number: playerNumbers[idx]}))
+console.log(data);
 
   let player1 = buildObject(playerNames[0],playerCountries[0],playerRoles[0])
   console.log(player1)
+
+
+ 
 
   
