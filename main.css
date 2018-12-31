@@ -101,7 +101,7 @@ div.role {
 
 .name {
     text-align: left;
-    text-transform: lowercase;
+    text-transform: capitalize
     
 }
 
