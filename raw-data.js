@@ -3047,7 +3047,7 @@ const playerNames = [
   ]
 
  const data = playerNames.map((name, idx) => ({name, country: playerCountries[idx], number: playerNumbers[idx], role:playerRoles[idx]}))
-console.log(data);
+
 
 
 
