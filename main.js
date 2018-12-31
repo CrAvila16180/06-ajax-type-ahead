@@ -15,10 +15,21 @@ function findMatches(word, players){
 };
 
 function displayMatches() {
-    console.log(this.value);
+    
     const matchArray = findMatches(this.value, players);
-    console.log(matchArray);
-}
+    const html = matchArray.map(player => {
+        const regex = new RegExp(this.value, 'gi');
+        const playerName = player.name.replace(regex, `<span class="hl">${this.value}</span>`);
+    const playerCountry = player.country.replace(regex, `<span class="hl">${this.value}</span>`);
+        return `
+        <li>
+            <span class="name">${playerName} </span>
+            <span class="population">${playerCountry}</span>
+            </li>`;
+    }).join('');
+
+    suggestions.innerHTML = html;
+};
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
