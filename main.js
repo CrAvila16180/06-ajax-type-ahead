@@ -1,4 +1,4 @@
-const endpoint = 'https://gist.githubusercontent.com/CrAvila/fde2c03d9e7cd72520614cb674f25ab6/raw/95526af3111f855037331742c669bcede365f28d/playerdata.json';
+const endpoint = 'https://gist.githubusercontent.com/CrAvila/fde2c03d9e7cd72520614cb674f25ab6/raw/fbb94f966b12be293c3b65d80efe2f08d3961267/playerdata.json';
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 const displayLength = document.querySelector('.length');
