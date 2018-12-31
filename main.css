@@ -51,6 +51,7 @@ input.search {
 }
 
 .suggestions li {
+    
     background: white;
     list-style: none;
     border-bottom: 1px solid #d8d8d8;
@@ -62,12 +63,14 @@ input.search {
     justify-content: space-between;
     text-transform: capitalize;
     flex-wrap: wrap;
+    flex-direction: column;
     
 }
 
 .suggestions li:nth-child(even){
     transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
     background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
+    margin-top: -5px;
 }
 
 .suggestions li:nth-child(odd) {
